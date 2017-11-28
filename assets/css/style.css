@@ -1,0 +1,64 @@
+*{
+	margin: 0 auto;
+}
+
+.kittens {
+	width: 100%;
+	background-size: cover;
+	/*ajusta la imagen al valor de width*/
+	height: 100vh;
+	/*Vh es una medida relativa de acuerdo al viewport. 
+	Vh hace referencia a la centésima parte de la altura del viewport.
+	1vh = 1% de la altura del viewport
+	100vh = altura del viewport*/
+	background-image: url(../img/sunny-day.jpg);
+}
+
+#large, #medium, #small{
+  	top: 55%;
+  	left: 20%;
+  	position: relative;
+	}
+
+/*full window*/
+#large {
+	display: block;
+	}
+#medium { 
+	display: none;
+	/*esconde el elemento*/
+	}
+#small {
+	display: none;
+	/*esconde el elemento*/
+	}
+
+
+/*medium window*/
+@media screen and (max-width: 900px) {
+	.kittens {
+		background-image: url("../img/dawn.png");
+		}
+	#large {
+		display: none;
+		/*esconde el elemento*/
+		}
+	#medium {
+		display: block;
+		}
+	}
+
+
+/*small window*/
+@media screen and (max-width: 450px) {
+	.kittens {
+		background-image: url("../img/night.jpg");
+		}
+	#medium {
+		display: none;
+		/*esconde el elemento*/
+		}
+	#small {
+		display: block;
+		}
+	}
